@@ -78,34 +78,6 @@ header .carrito {
     display: block;
 }
 
-.square-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.square {
-    width: 300px;
-    height: 300px;
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-
-}
-
-.square.orange {
-    background-color: rgb(255, 153, 0);
-}
-
-.square.brown {
-    background-color: rgb(255, 115, 0);
-}
-
 @media (max-width: 768px) {
     .carousel-container {
         max-width: 100%;
