@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Donación y Suscripción</title>
+  <link rel="stylesheet" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="validaciones.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/icono.jpg" alt="icono" width="85px" height="65"></a>
+    <h1>Donación y Suscripción</h1>
+    <a href="carrito.html" class="carrito"><img src="img/carrito.jpg" alt="carrito" width="90px" height="70"></a>
+  </header>
+  <nav class="flex-container">
+    <a href="index.html">Inicio</a>
+    <a href="Donaciones.html">Donaciones</a>
+    <a href="Ofertas.html">Ofertas</a>
+    <a href="Nosotros.html">Sobre Nosotros</a>
+  </nav>
+  <main class="container">
+    <div class="form-container">
+      <h2>Donar</h2>
+      <form action="procesar_donacion.php" method="POST">
+        <label for="cantidad_donacion">Cantidad a donar:</label>
+        <input type="number" id="cantidad_donacion" name="cantidad_donacion" min="1" required>
+        <br>
+        <label for="nombre_donacion">Nombre:</label>
+        <input type="text" id="nombre_donacion" name="nombre_donacion" required>
+        <br>
+        <label for="email_donacion">Email:</label>
+        <input type="email" id="email_donacion" name="email_donacion" required>
+        <br>
+        <button type="submit">Donar</button>
+      </form>
+    </div>
+    <div class="form-container">
+      <h2>Suscribirse</h2>
+      <form action="procesar_suscripcion.php" method="POST">
+        <label for="plan">Seleccione un plan de suscripción:</label>
+        <select name="plan" id="plan" required>
+          <option value="mensual">Mensual</option>
+          <option value="anual">Anual</option>
+        </select>
+        <br>
+        <label for="nombre_suscripcion">Nombre:</label>
+        <input type="text" id="nombre_suscripcion" name="nombre_suscripcion" required>
+        <br>
+        <label for="email_suscripcion">Email:</label>
+        <input type="email" id="email_suscripcion" name="email_suscripcion" required>
+        <br>
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
